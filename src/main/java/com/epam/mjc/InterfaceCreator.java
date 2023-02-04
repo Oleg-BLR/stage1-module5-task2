@@ -18,9 +18,10 @@ public class InterfaceCreator {
 //    First solution
 
     public Operation<Integer> divideBy(Integer divider) {
-        Function<Integer, Integer> devide = integer -> integer / divider;
+//        Function<Integer, Integer> devide = integer -> integer / divider;
         return operation -> operation.stream()
-                .map(devide)
+//                .map(devide)
+                .map(e -> e/divider)
                 .collect(Collectors.toList());
     }
 
